@@ -1,4 +1,5 @@
-[![Automatic testing](https://github.com/dium-li3/grupo-96/actions/workflows/auto_testing.yml/badge.svg)](https://github.com/dium-li3/grupo-96/actions/workflows/auto_testing.yml)
+[![Automatic testing](https://github.com/migueltc13/projeto-LI3/actions/workflows/auto_testing.yml/badge.svg)](https://github.com/migueltc13/projeto-LI3/actions/workflows/auto_testing.yml)
+[![Valgrind](https://github.com/migueltc13/projeto-LI3/actions/workflows/valgrind.yml/badge.svg)](https://github.com/migueltc13/projeto-LI3/actions/workflows/valgrind.yml)
 
 # Projeto LI3
 
