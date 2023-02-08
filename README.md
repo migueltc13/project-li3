@@ -59,10 +59,12 @@
 ## Arquitetura do projeto
 
 
-<details>
+<details open>
 <summary>diagrama</summary>
 
-[![Diagrama](.github/img/diagram.png)](.github/img/diagram.svg)
+[![Diagrama](.github/img/diagram.png)](.github/img/diagram.png)
+
+[diagram.svg](.github/img/diagram.svg)
 
 </details>
 
@@ -141,20 +143,18 @@ Teste de desempenho - Parsing dos dados
 Number of drivers parsed: 10000
 Number of users parsed:  100000
 Number of rides parsed: 1000000
-Parsing data time: 8.66s
+Parsing data time: 4.11s
 
 Teste de desempenho - Avaliação de queries
-Query 1 | 0.00000175s | "1 SaCruz110"
-Query 2 | 0.00003250s | "2 50"
-Query 3 | 0.00002250s | "3 50"
-Query 4 | 0.00000300s | "4 Braga"
-Query 5 | 0.02394250s | "5 01/01/2021 01/02/2021"
-Query 6 | 0.06587550s | "6 Porto 01/01/2021 01/02/2021"
-Query 7 | 0.00001600s | "7 50 Lisboa"
-Query 8 | 0.00361250s | "8 M 12"
-Query 9 | 0.01861500s | "9 01/01/2021 01/02/2021"
-
-(...)
+Query 1 | 0.00000075s | "1 SaCruz110"
+Query 2 | 0.00000800s | "2 50"
+Query 3 | 0.00000600s | "3 50"
+Query 4 | 0.00000025s | "4 Braga"
+Query 5 | 0.01275250s | "5 01/01/2021 01/02/2021"
+Query 6 | 0.02461975s | "6 Porto 01/01/2021 01/02/2021"
+Query 7 | 0.00000700s | "7 50 Lisboa"
+Query 8 | 0.00283650s | "8 M 12"
+Query 9 | 0.01340325s | "9 01/01/2021 01/02/2021"
 
 Teste funcional - Validação de queries
 command1_output.txt:	Pass ✔
@@ -206,22 +206,34 @@ max mmap bytes   =  588943360
 make debug
 ```
 
-### [GDB](https://www.sourceware.org/gdb/):
+### [GDB](https://www.sourceware.org/gdb/)
 
 ```sh
 gdb ./programa-principal
 ```
 
-### [Valgrind](https://valgrind.org/):
+### [Valgrind](https://valgrind.org/)
 
 ```sh
 valgrind ./programa-principal <dir_with_csvs> <input_file_path>
 ```
 
+### Time
+
+```sh
+command time -v ./programa-principal <dir_with_csvs> <input_file_path>
+```
+
+### Memusage
+
+```sh
+memusage ./programa-principal <dir_with_csvs> <input_file_path>
+```
+
 ## Realizado por:
 
-a100711,João Andrade Rodrigues,joaorodriguesss
+[_](https://github.com/joaorodriguesss) João Rodrigues
 
-a95485,Miguel Torres Carvalho,migueltc13
+[_](https://github.com/rafa-peixoto) Rafael Peixoto
 
-a100754,Rafael Vale da Costa Peixoto,Rafa-Peixoto
+[_](https://github.com/migueltc13) Miguel Carvalho
