@@ -2,12 +2,13 @@
 
 # Projeto LI3
 
+- [enunciado.pdf](trabalho-pratico/enunciado.pdf)
+
 <!--
 <details>
 <summary><b>TODO list</b></summary>
 
 <br>
-
 
 - [ ] Queries 
   - [ ] Q2, Q3
@@ -58,15 +59,7 @@
 
 ## Arquitetura do projeto
 
-
-<details open>
-<summary>diagrama</summary>
-
-[![Diagrama](.github/img/diagram.png)](.github/img/diagram.png)
-
-[diagram.svg](.github/img/diagram.svg)
-
-</details>
+[![Diagrama](.github/img/diagram.png)](.github/img/diagram.svg)
 
 ## Relatórios
 
@@ -78,7 +71,7 @@
 - [glib2](https://docs.gtk.org/glib/index.html) para manipulação das coleções de dados;
 
 <details>
-  <summary>install</summary>
+  <summary>Instalação</summary>
 
   ```sh
   apt install gcc make libglib2.0-dev libgtk2.0-dev gdb valgrind -y
@@ -105,8 +98,8 @@ make
 ./programa-principal
 ```
 
-<details>
-  <summary>exemplo de utilização</summary>
+<details open>
+  <summary>Exemplo de utilização</summary>
 
 ```
 Enter dataset path: dataset
@@ -135,8 +128,8 @@ make programa-testes
 ./programa-testes <dir_with_csvs> <dir_with_input_and_outputs>
 ```
 
-<details>
-  <summary>exemplo de output</summary>
+<details open>
+  <summary>Exemplo de output</summary>
 
 ```
 Teste de desempenho - Parsing dos dados
@@ -232,8 +225,8 @@ memusage ./programa-principal <dir_with_csvs> <input_file_path>
 
 ## Realizado por:
 
-[_](https://github.com/joaorodriguesss) João Rodrigues
+- [![](github.png)](https://github.com/joaorodriguesss) João Rodrigues
 
-[_](https://github.com/rafa-peixoto) Rafael Peixoto
+- [![](github.png)](https://github.com/rafa-peixoto) Rafael Peixoto
 
-[_](https://github.com/migueltc13) Miguel Carvalho
+- [![](github.png)](https://github.com/migueltc13) Miguel Carvalho
