@@ -1,0 +1,25 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+# Unignore Makefile
+!Makefile
+
+# Ignore default executable
+a.out
+*.o
+*.exe
+
+# Ignore all csv files
+*.csv
+
+# Ignore custom dirs
+Resultados/
+datasets/
+exemplos_de_queries/
+extras/

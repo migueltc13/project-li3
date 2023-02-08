@@ -1,0 +1,55 @@
+name: Automatic testing
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule: 
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+    working-directory: trabalho-pratico
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: wget files
+      run: |
+        wget -q --show-progress -r -np -nH -R index.html -R index.html.tmp --no-check-certificate https://dium-li3.tk/datasets/tests_1/
+        wget -q --show-progress -r -np -nH -R index.html -R index.html.tmp --no-check-certificate https://dium-li3.tk/datasets/tests_2/
+        wget -q --show-progress -r -np -nH -R index.html -R index.html.tmp --no-check-certificate https://dium-li3.tk/datasets/data-regular/
+
+    - name: build
+      run: |
+        make
+
+    - name: run programa-principal (batch mode)
+      run: |
+        ./programa-principal datasets/data-regular/ datasets/tests_1/input.txt
+
+    - name: run programa-principal (interactive mode)
+      run: |
+        echo "datasets/data-regular/" | cat - datasets/tests_1/input.txt > temp_input.txt
+        ./programa-principal < temp_input.txt
+        echo ""
+
+    - name: run programa-testes tests_1
+      run: |
+        ./programa-testes datasets/data-regular/ datasets/tests_1/
+
+    - name: run programa-testes tests_2
+      run: |
+        ./programa-testes datasets/data-regular/ datasets/tests_2/
+
+    - name: clean up
+      run: |
+        make clean

@@ -1,0 +1,36 @@
+name: Valgrind
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+    working-directory: trabalho-pratico
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: wget files
+      run: |
+        wget -q --show-progress -r -np -nH -R index.html -R index.html.tmp --no-check-certificate https://dium-li3.tk/datasets/data-lite/
+        sudo apt install valgrind
+
+    - name: build
+      run: |
+        make debug
+
+    - name: valgrind
+      run: valgrind ./programa-principal datasets/data-lite/ datasets/data-lite/input.txt
+
+    - name: valgrind --leak-check=full
+      run: valgrind --leak-check=full --show-leak-kinds=all --num-callers=20 ./programa-principal datasets/data-lite/ datasets/data-lite/input.txt # --log-file=valgrind-output.txt
