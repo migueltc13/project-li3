@@ -113,7 +113,7 @@ make
 ./programa-principal
 ```
 
-<details open>
+<details>
   <summary>Exemplo de utilização</summary>
 
 ```
@@ -143,7 +143,7 @@ make programa-testes
 ./programa-testes <dir_with_csvs> <dir_with_input_and_outputs>
 ```
 
-<details open>
+<details>
   <summary>Exemplo de output</summary>
 
 ```
