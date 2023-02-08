@@ -3,6 +3,20 @@
 
 # Projeto LI3
 
+ Este projeto resultou no desenvolvimento de um programa para leitura e interpretação de três ficheiros de entrada: users.csv, drivers.csv e rides.csv.
+ 
+ A aplicação foi dividida em módulos que realizam as seguintes tarefas:
+ 
+- Parsing de dados
+- Interpretação de comandos
+- Armazenamento de informações em catálogos:
+   - Usuários
+   - Motoristas
+   - Viagens
+   - Estatísticas
+ 
+ Cada catálogo é responsável por armazenar informações relevantes dos ficheiros de entrada, enquanto o módulo de estatísticas permite relacionar os principais modelos e fornecer acesso rápido a dados e resultados.
+
 - [enunciado.pdf](trabalho-pratico/enunciado.pdf)
 
 <!--
