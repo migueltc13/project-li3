@@ -222,11 +222,3 @@ command time -v ./programa-principal <dir_with_csvs> <input_file_path>
 ```sh
 memusage ./programa-principal <dir_with_csvs> <input_file_path>
 ```
-
-## Realizado por:
-
-- [![](github.png)](https://github.com/joaorodriguesss) João Rodrigues
-
-- [![](github.png)](https://github.com/rafa-peixoto) Rafael Peixoto
-
-- [![](github.png)](https://github.com/migueltc13) Miguel Carvalho
